@@ -127,7 +127,6 @@ print(f"Final Test Accuracy: {final_acc * 100:.2f}%")
 fig = plt.figure(facecolor="w")
 
 # Plot the test accuracy history that we recorded during training
-# Each entry in `test_acc_hist` corresponds to the accuracy at a particular point in training
 plt.plot(test_acc_hist)
 
 # Add a title and axis labels
