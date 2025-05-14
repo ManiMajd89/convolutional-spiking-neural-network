@@ -1,12 +1,12 @@
-# ⚡ Convolutional Spiking Neural Network (CSNN) using snnTorch
+# Convolutional Spiking Neural Network (CSNN) using snnTorch
 
-This repository provides a detailed implementation of a **Convolutional Spiking Neural Network (CSNN)** trained on the MNIST dataset using biologically-inspired **Leaky Integrate-and-Fire (LIF)** spiking neurons. Built with [snnTorch](https://github.com/jeshraghian/snntorch) and PyTorch, this project demonstrates how spiking neuron models can be trained using surrogate gradients and used effectively for image classification.
+This repository provides a detailed implementation of a **Convolutional Spiking Neural Network (CSNN)** trained on the MNIST dataset using biologically-inspired **Leaky Integrate-and-Fire (LIF)** spiking neurons. Built with snnTorch and PyTorch, this project demonstrates how spiking neuron models can be trained using surrogate gradients and used effectively for image classification.
 
 Rather than computing outputs in a single forward pass like traditional deep networks, this model processes each input over **100 discrete time steps**, allowing neurons to integrate temporal input and emit binary spikes when membrane thresholds are crossed — mimicking biological computation in the brain.
 
 ---
 
-## 🧠 Overview
+## Overview
 
 Spiking Neural Networks (SNNs) represent the third generation of neural networks. They leverage **temporal coding**, **event-based computation**, and **sparsity**, enabling energy-efficient and brain-like behavior. In this project, we develop and train a CSNN that processes inputs dynamically across time steps, using a temporal window and LIF neurons to accumulate input signals and generate spike outputs. 
 
@@ -14,11 +14,11 @@ Training is achieved using surrogate gradients, which approximate the non-differ
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 This CSNN is composed of stacked convolutional layers for spatial feature extraction, followed by fully connected layers for decision making. Each convolutional block is followed by a LIF spiking neuron layer, which processes the output across time steps.
 
-### 🔍 Layer-by-layer breakdown:
+### Layer-by-layer breakdown:
 
 ```
 Input: [1 x 28 x 28] grayscale image
@@ -46,7 +46,7 @@ Input: [1 x 28 x 28] grayscale image
 
 ---
 
-## ⚙️ Implementation Details
+## Implementation Details
 
 | Component             | Value / Description                           |
 |----------------------|------------------------------------------------|
@@ -62,13 +62,13 @@ Input: [1 x 28 x 28] grayscale image
 | Evaluation Metric    | Accuracy from highest output spike count      |
 | Device Support       | CUDA, Apple MPS, or CPU (auto-detected)       |
 
-### ⏱️ Temporal Simulation
+### Temporal Simulation
 
 Each MNIST image is presented repeatedly across 100 simulation steps. At each step, neurons update their internal voltage state and emit spikes when the threshold is exceeded. The total number of spikes per output neuron is used to determine the predicted class.
 
 ---
 
-## 🧪 Dataset: MNIST
+## Dataset: MNIST
 
 - MNIST is a benchmark image dataset of handwritten digits (0–9)
 - 28x28 grayscale images, 10 classes
@@ -162,13 +162,6 @@ This implementation is inspired by the paper:
 Special thanks to the developers of [snnTorch](https://github.com/jeshraghian/snntorch) for their excellent neuromorphic deep learning framework.
 
 ---
-
-## 👤 Author
-
-**Mani Majd**  
-Engineering Science, University of Toronto  
-📫 [LinkedIn](https://www.linkedin.com/in/mani-majd)  
-💻 [GitHub](https://github.com/yourusername)
 
 ## 👤 Author
 
