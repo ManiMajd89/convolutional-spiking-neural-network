@@ -79,30 +79,44 @@ Each MNIST image is presented repeatedly across 100 simulation steps. At each st
 
 ---
 
-## 📈 Results
+## Results
 
 After training the CSNN for 1 epoch on the MNIST dataset, the model achieved **state-of-the-art performance** for shallow spiking networks trained from scratch using surrogate gradients.
 
-### ✅ Final Test Accuracy
+### Test Accuracy by Iteration
 
 ```
+Iter 0, Test Acc:   9.79%
+Iter 50, Test Acc:  9.82%
+Iter 100, Test Acc: 84.29%
+Iter 150, Test Acc: 87.12%
+Iter 200, Test Acc: 95.55%
+Iter 250, Test Acc: 96.57%
+Iter 300, Test Acc: 96.72%
+Iter 350, Test Acc: 97.31%
+Iter 400, Test Acc: 97.26%
+Iter 450, Test Acc: 97.32%
 Final Test Accuracy: 97.41%
 ```
 
-### 📊 Performance Summary
+- The model rapidly improves after 100 iterations.
+- Accuracy surpasses 95% after just 200 iterations.
+- Final test accuracy of **97.41%** after a single epoch demonstrates excellent performance for an SNN trained from scratch using surrogate gradients.
+
+### Performance Summary
 
 - Accuracy evaluated using `accuracy_rate()` across all test samples
 - Classification based on spike count across 100 time steps
 - Model shows strong convergence even in a single epoch due to temporal integration and convolutional abstraction
 - Loss decreases consistently; accuracy climbs rapidly and stabilizes above 97%
 
-### 📉 Accuracy Progression
+### Accuracy Progression
 
 A real-time test accuracy plot is displayed at the end of training. The test accuracy rises steeply within the first few hundred iterations and plateaus around 97.4%, showing strong generalization and temporal learning capabilities.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
